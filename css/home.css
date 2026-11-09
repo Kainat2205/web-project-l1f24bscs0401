@@ -1,0 +1,22 @@
+/* Home: element, class and ID selectors; fonts, text, borders and background. */
+h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; }
+.nav-link[aria-current="page"] { color: #b58452; border-bottom: 1px solid #b58452; }
+#hero { background-color: #e4e0da; overflow: hidden; }
+#hero video { display: block; width: 100%; height: calc(100vh - 158px); min-height: 370px; object-fit: cover; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.collections { padding: 90px 5% 42px; }
+.collection { display: flex; flex-wrap: wrap; align-items: center; margin: 0 -12px 64px; }
+.collection > div { width: 33.333%; padding: 0 12px; }
+.collection-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5.55; object-fit: cover; }
+.collection-copy { text-align: center; }
+.collection-copy h2 { font-size: 13px; font-weight: 600; letter-spacing: 1.5px; margin: 0 0 24px; }
+.season { font-size: 12px; letter-spacing: 1.5px; font-weight: 600; }
+.collection-name { font-size: 11px; letter-spacing: 1.8px; margin-bottom: 10px; }
+.small-note { margin-top: 16px; font-size: 11px; color: #888; }
+.service-strip { display: flex; flex-wrap: wrap; margin: 25px 0 0; padding: 40px 5%; background-color: #f7f7f7; text-align: center; }
+.service-strip > div { width: 25%; padding: 5px 12px; }
+.service-strip span { display: block; font-size: 26px; color: #777; margin-bottom: 15px; }
+.service-strip h3 { font-size: 12px; font-weight: 400; }
+.service-strip p { font-size: 11px; color: #929292; }
+.back-top { position: fixed; right: 22px; bottom: 22px; border: 1px solid #bdbdbd; background: rgba(255,255,255,.9); padding: 6px 13px; }
+@media(max-width: 700px) { #hero video { height: 60vh; min-height: 280px; } .collections { padding-top: 35px; } .collection { margin-bottom: 40px; } .collection > div { width: 50%; padding: 0 7px; } .collection .collection-copy { width: 100%; order: 3; padding: 35px 15px 5px; } .collection-photo img { aspect-ratio: 4 / 5.55; } .service-strip > div { width: 50%; padding: 20px 5px; } }
