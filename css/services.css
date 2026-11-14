@@ -1,0 +1,117 @@
+/* Flexbox cards, wrapping, alignment, gaps and hover transitions. */
+.nav-link[aria-current="page"] {
+    color: #90623e;
+    box-shadow: inset 0 -2px #b58452;
+}
+
+.services-main {
+    width: 88%;
+    max-width: 1240px;
+    margin: auto;
+}
+
+.services-main h1,
+.services-main h2,
+.services-main h3 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.services-main h1 {
+    font-size: clamp(32px, 3.5vw, 51px);
+    line-height: 1.15;
+}
+
+.services-main h2 {
+    font-size: clamp(28px, 3vw, 38px);
+}
+
+.services-eyebrow {
+    color: #806044;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.services-intro {
+    display: flex;
+    align-items: center;
+    gap: 7%;
+    background: linear-gradient(115deg, #f4eee5, #faf8f5);
+}
+
+.services-intro-copy {
+    flex: 1;
+    padding: 48px 0 48px 6%;
+}
+
+.services-intro-image {
+    width: 38%;
+    height: 510px;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+/* Bootstrap styles each card; this is the required handwritten Flexbox layout. */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+.service-card {
+    flex: 1 1 270px;
+    min-width: 0;
+    border-color: #e7dfd5;
+    transition: transform 250ms, box-shadow 250ms;
+}
+
+.service-card:hover,
+.service-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(65, 45, 25, .12);
+}
+
+.service-card>img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.service-card h3 {
+    font-size: 26px;
+}
+
+.service-card a {
+    font-size: 12px;
+}
+
+@media (max-width: 760px) {
+    .services-intro {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .services-intro-copy {
+        padding: 38px 26px;
+    }
+
+    .services-intro-image {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-card {
+        transition: none;
+    }
+
+    .service-card:hover,
+    .service-card:focus-within {
+        transform: none;
+    }
+}
